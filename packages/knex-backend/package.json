@@ -1,0 +1,28 @@
+{
+  "name": "@deoxys/knex-backend",
+  "version": "0.0.1",
+  "description": "A knex based backend for deoxys",
+  "main": "lib/index.js",
+  "author": "lorefnon",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "ava",
+    "prepare": "tsc"
+  },
+  "dependencies": {
+    "@deoxys/repository": "^0.0.1",
+    "knex": "^0.14.6",
+    "pg": "^7.4.2",
+    "sqlite3": "^4.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "typescript": "^2.5.2"
+  },
+  "ava": {
+    "files": [
+      "lib/**/*.spec.js"
+    ]
+  }
+}

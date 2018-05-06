@@ -1,0 +1,22 @@
+{
+  "name": "@deoxys/repository",
+  "version": "0.0.1",
+  "description": "A persistence solution for node based on Repository pattern",
+  "main": "dist/index.js",
+  "author": "lorefnon",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "ava",
+    "prepare": "tsc"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "typescript": "^2.5.2"
+  },
+  "ava": {
+    "files": [
+      "lib/**/*.spec.js"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "deoxys",
+  "version": "0.0.1",
+  "description": "Repository based persistence solution for node",
+  "main": "index.js",
+  "author": "lorefnon",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^2.11.0",
+    "typescript": "^2.8.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
