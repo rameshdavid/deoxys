@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_mapperproxy_.html">&quot;MapperProxy&quot;</a>
+					<a href="../modules/_entitymapper_.html">&quot;EntityMapper&quot;</a>
 				</li>
 				<li>
-					<a href="_mapperproxy_.entitymapper.html">EntityMapper</a>
+					<a href="_entitymapper_.entitymapper.html">EntityMapper</a>
 				</li>
 			</ul>
 			<h1>Interface EntityMapper&lt;RecordType, EntityType, RecordMappingParams&gt;</h1>
@@ -94,6 +94,7 @@
 			<section class="tsd-panel">
 				<h3>Implemented by</h3>
 				<ul class="tsd-hierarchy">
+					<li><a href="../classes/_identitymapper_.identitymapper.html" class="tsd-signature-type">IdentityMapper</a></li>
 					<li><a href="../classes/_mapperproxy_.mapperproxy.html" class="tsd-signature-type">MapperProxy</a></li>
 				</ul>
 			</section>
@@ -104,15 +105,15 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_mapperproxy_.entitymapper.html#mapentitiestorecords" class="tsd-kind-icon">map<wbr>Entities<wbr>ToRecords</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_mapperproxy_.entitymapper.html#maprecordstoentities" class="tsd-kind-icon">map<wbr>Records<wbr>ToEntities</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_entitymapper_.entitymapper.html#mapentitiestorecords" class="tsd-kind-icon">map<wbr>Entities<wbr>ToRecords</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_entitymapper_.entitymapper.html#maprecordstoentities" class="tsd-kind-icon">map<wbr>Records<wbr>ToEntities</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="_mapperproxy_.entitymapper.html#mapentitytorecord" class="tsd-kind-icon">map<wbr>Entity<wbr>ToRecord</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="_mapperproxy_.entitymapper.html#maprecordtoentity" class="tsd-kind-icon">map<wbr>Record<wbr>ToEntity</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="_entitymapper_.entitymapper.html#mapentitytorecord" class="tsd-kind-icon">map<wbr>Entity<wbr>ToRecord</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter"><a href="_entitymapper_.entitymapper.html#maprecordtoentity" class="tsd-kind-icon">map<wbr>Record<wbr>ToEntity</a></li>
 							</ul>
 						</section>
 					</div>
@@ -126,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">map<wbr>Entities<wbr>ToRecords<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in MapperProxy.ts:31</li>
+							<li>Defined in EntityMapper.ts:34</li>
 						</ul>
 					</aside>
 				</section>
@@ -136,7 +137,7 @@
 					<div class="tsd-signature tsd-kind-icon">map<wbr>Records<wbr>ToEntities<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in MapperProxy.ts:24</li>
+							<li>Defined in EntityMapper.ts:26</li>
 						</ul>
 					</aside>
 				</section>
@@ -153,7 +154,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in MapperProxy.ts:17</li>
+									<li>Defined in EntityMapper.ts:18</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -191,7 +192,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in MapperProxy.ts:10</li>
+									<li>Defined in EntityMapper.ts:10</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -228,6 +229,12 @@
 						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-external-module">
+						<a href="../modules/_entitymapper_.html">"<wbr>Entity<wbr>Mapper"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_identitymapper_.html">"<wbr>Identity<wbr>Mapper"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_mapperproxy_.html">"<wbr>Mapper<wbr>Proxy"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
@@ -243,28 +250,25 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="../classes/_mapperproxy_.mapperproxy.html" class="tsd-kind-icon">Mapper<wbr>Proxy</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_mapperproxy_.defaultrecordmappingparams.html" class="tsd-kind-icon">Default<wbr>Record<wbr>Mapping<wbr>Params</a>
+						<a href="_entitymapper_.defaultrecordmappingparams.html" class="tsd-kind-icon">Default<wbr>Record<wbr>Mapping<wbr>Params</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-has-type-parameter">
-						<a href="_mapperproxy_.entitymapper.html" class="tsd-kind-icon">Entity<wbr>Mapper</a>
+						<a href="_entitymapper_.entitymapper.html" class="tsd-kind-icon">Entity<wbr>Mapper</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_mapperproxy_.entitymapper.html#mapentitiestorecords" class="tsd-kind-icon">map<wbr>Entities<wbr>ToRecords</a>
+								<a href="_entitymapper_.entitymapper.html#mapentitiestorecords" class="tsd-kind-icon">map<wbr>Entities<wbr>ToRecords</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_mapperproxy_.entitymapper.html#maprecordstoentities" class="tsd-kind-icon">map<wbr>Records<wbr>ToEntities</a>
+								<a href="_entitymapper_.entitymapper.html#maprecordstoentities" class="tsd-kind-icon">map<wbr>Records<wbr>ToEntities</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-								<a href="_mapperproxy_.entitymapper.html#mapentitytorecord" class="tsd-kind-icon">map<wbr>Entity<wbr>ToRecord</a>
+								<a href="_entitymapper_.entitymapper.html#mapentitytorecord" class="tsd-kind-icon">map<wbr>Entity<wbr>ToRecord</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-has-type-parameter">
-								<a href="_mapperproxy_.entitymapper.html#maprecordtoentity" class="tsd-kind-icon">map<wbr>Record<wbr>ToEntity</a>
+								<a href="_entitymapper_.entitymapper.html#maprecordtoentity" class="tsd-kind-icon">map<wbr>Record<wbr>ToEntity</a>
 							</li>
 						</ul>
 					</li>

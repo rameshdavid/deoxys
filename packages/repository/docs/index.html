@@ -65,6 +65,8 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<h1 id="deoxys">Deoxys</h1>
+				<p>:warning: This package is in early development.</p>
+				<hr>
 				<p>Deoxys is an flexible, adaptable and type-safe repository pattern implementation for Node.js.</p>
 				<p>Deoxys encourages you to build your applications such that:</p>
 				<ol>
@@ -93,21 +95,32 @@ yarn <span class="hljs-keyword">add</span> @deoxys/core
 // <span class="hljs-keyword">OR</span>
 
 yarn <span class="hljs-keyword">add</span> @deoxys/knex-backend
-</code></pre><h2 id="example">Example</h2>
+</code></pre><h2 id="api-docs">API Docs</h2>
+				<ul>
+					<li><a href="https://deoxys-node.github.io/deoxys/packages/repository/docs/index.html">@deoxys/repository</a></li>
+					<li><a href="https://deoxys-node.github.io/deoxys/packages/knex-backend/docs/index.html">@deoxys/knex-backend</a></li>
+				</ul>
+				<h2 id="example">Example</h2>
 				<h3 id="basic">Basic</h3>
-				<pre><code><span class="hljs-comment">// user-repo.ts</span>
+				<pre><code><span class="hljs-regexp">//</span> user-repo.ts
 
 <span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> knex <span class="hljs-keyword">from</span> <span class="hljs-string">"knex"</span>;
 <span class="hljs-keyword">import</span> {Repository} <span class="hljs-keyword">from</span> <span class="hljs-string">"@deoxys/knex-backend"</span>;
 
-<span class="hljs-keyword">const</span> userRepo = Repository({
-    <span class="hljs-attr">source</span>: knex(<span class="hljs-string">"users"</span>)
+const usersRepo = Repository({
+    source: knex(<span class="hljs-string">"users"</span>)
 });
 
-userRepo.insertAll([{
-    <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
-    <span class="hljs-attr">name</span>: <span class="hljs-string">"Alkazar"</span>
-}])
+usersRepo.insertOne({
+    id: <span class="hljs-number">1</span>,
+    name: <span class="hljs-string">"Alkazar"</span>
+})
+
+usersRepo.find({
+    name: <span class="hljs-string">"Alkazar"</span>
+}).<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(entity)</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(entity);
+})
 </code></pre><h3 id="repositories-backed-by-joined-tables">Repositories backed by joined tables</h3>
 				<h3 id="custom-repositories">Custom repositories</h3>
 				<h3 id="using-mappers-along-with-repositories">Using mappers along with repositories</h3>
@@ -118,6 +131,12 @@ userRepo.insertAll([{
 				<ul>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_entitymapper_.html">"<wbr>Entity<wbr>Mapper"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_identitymapper_.html">"<wbr>Identity<wbr>Mapper"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="modules/_mapperproxy_.html">"<wbr>Mapper<wbr>Proxy"</a>

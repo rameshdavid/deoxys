@@ -3,16 +3,21 @@ import {
   Repository,
   EntityMapper,
   UtilTypes as U,
-  MapperProxy
+  MapperProxy,
+  IdentityMapper
 } from "@deoxys/repository";
 
 export type QueryParam<T extends {} = {}> = T | ((source: knex.QueryBuilder) => knex.QueryBuilder);
 
+/**
+ * Implements a repository backed by knex - a flexible and portal SQL query buidler which supports
+ * many relational databases
+ */
 export class KnexRepository<R, E, M> implements Repository<R, E, M> {
   private source: knex.QueryBuilder;
   mapper: MapperProxy<R, E, M>;
 
-  constructor(source: knex.QueryBuilder, mapper: EntityMapper<R, E, M>) {
+  constructor(source: knex.QueryBuilder, mapper: EntityMapper<R, E, M> = new IdentityMapper) {
     this.source = source;
     this.mapper = new MapperProxy(mapper);
   }

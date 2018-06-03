@@ -40,6 +40,11 @@ npm install --save @deoxys/knex-backend
 yarn add @deoxys/knex-backend
 ```
 
+## API Docs
+
+- [@deoxys/repository](https://deoxys-node.github.io/deoxys/packages/repository/docs/index.html)
+- [@deoxys/knex-backend](https://deoxys-node.github.io/deoxys/packages/knex-backend/docs/index.html)
+
 ## Example
 
 ### Basic
