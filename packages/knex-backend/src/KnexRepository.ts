@@ -4,7 +4,8 @@ import {
   EntityMapper,
   UtilTypes as U,
   MapperProxy,
-  IdentityMapper
+  IdentityMapper,
+  DefaultRecordMappingParams
 } from "@deoxys/repository";
 
 export type QueryParam<T extends {} = {}> = T | ((source: knex.QueryBuilder) => knex.QueryBuilder);
@@ -13,59 +14,59 @@ export type QueryParam<T extends {} = {}> = T | ((source: knex.QueryBuilder) => 
  * Implements a repository backed by knex - a flexible and portal SQL query buidler which supports
  * many relational databases
  */
-export class KnexRepository<R, E, M> implements Repository<R, E, M> {
+export class KnexRepository<RecordType, EntityType = RecordType, RecordMappingParams = DefaultRecordMappingParams> implements Repository<RecordType, EntityType, RecordMappingParams> {
   private source: knex.QueryBuilder;
-  mapper: MapperProxy<R, E, M>;
+  mapper: MapperProxy<RecordType, EntityType, RecordMappingParams>;
 
-  constructor(source: knex.QueryBuilder, mapper: EntityMapper<R, E, M> = new IdentityMapper) {
+  constructor(source: knex.QueryBuilder, mapper: EntityMapper<RecordType, EntityType, RecordMappingParams> = new IdentityMapper) {
     this.source = source;
     this.mapper = new MapperProxy(mapper);
   }
 
   where<T = {}>(query: QueryParam<T>): knex.QueryBuilder {
     if (typeof query === 'function') {
-        return query(this.source);
+        return query(this.source.clone());
     }
-    return this.source.where(query);
+    return this.source.clone().where(query);
   }
 
   async findOne<Q, T>(
     query: QueryParam<Q>,
-    mappingParams?: M
+    mappingParams?: RecordMappingParams
   ): Promise<U.Maybe<T>> {
-    const record: R = await this.where(query).first();
+    const record: RecordType = await this.where(query).first();
     if (!record) return null;
-    return this.mapper.mapRecordToEntity<R, T>(record, mappingParams);
+    return this.mapper.mapRecordToEntity<RecordType, T>(record, mappingParams);
   }
 
-  async findMany<Q, T>(query: QueryParam<Q>, mappingParams?: M): Promise<T[]> {
-    const records: R[] = await this.where(query);
-    return this.mapper.mapRecordsToEntities<R, T>(records, mappingParams);
+  async findMany<Q, T>(query: QueryParam<Q>, mappingParams?: RecordMappingParams): Promise<T[]> {
+    const records: RecordType[] = [].concat(await this.where(query).select());
+    return this.mapper.mapRecordsToEntities<RecordType, T>(records, mappingParams);
   }
 
-  async insertOne(entity: E, mappingParams?: M, ...args: any[]) {
-    const record = await this.mapper.mapEntityToRecord<R, E>(entity, mappingParams);
+  async insertOne(entity: EntityType, mappingParams?: RecordMappingParams, ...args: any[]) {
+    const record = await this.mapper.mapEntityToRecord<RecordType, EntityType>(entity, mappingParams);
     return await this.source.insert(record, ...args);
   }
 
-  async insertMany(entities: E[], mappingParams?: M, ...args: any[]) {
-    const records = await this.mapper.mapEntitiesToRecords<R, E>(
+  async insertMany(entities: EntityType[], mappingParams?: RecordMappingParams, ...args: any[]) {
+    const records = await this.mapper.mapEntitiesToRecords<RecordType, EntityType>(
       entities,
       mappingParams
     );
     return await this.source.insert(records, ...args);
   }
 
-  async updateOne<T>(entity: T, mappingParams?: M) {
-    const record = await this.mapper.mapEntityToRecord<Partial<R>, T>(
+  async updateOne<T>(entity: T, mappingParams?: RecordMappingParams) {
+    const record = await this.mapper.mapEntityToRecord<Partial<RecordType>, T>(
         entity,
         mappingParams
     );
     return await this.source.update(record);
   }
 
-  async updateMany<T>(entities: T[], mappingParams?: M) {
-    const records = await this.mapper.mapEntitiesToRecords<Partial<R>, T>(
+  async updateMany<T>(entities: T[], mappingParams?: RecordMappingParams) {
+    const records = await this.mapper.mapEntitiesToRecords<Partial<RecordType>, T>(
         entities,
         mappingParams
     );

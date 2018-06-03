@@ -7,15 +7,35 @@
   "license": "MIT",
   "private": true,
   "scripts": {
+    "test": "jest",
     "lerna": "lerna",
     "build": "lerna run --scope @deoxys/repository tsc && lerna run --ignore @deoxys/repository tsc",
     "docs": "lerna run typedoc"
   },
   "devDependencies": {
+    "@types/fs-extra": "^5.0.2",
+    "@types/jest": "^23.0.0",
+    "fs-extra": "^6.0.1",
+    "jest": "^23.1.0",
     "lerna": "^2.11.0",
+    "ts-jest": "^22.4.6",
     "typescript": "^2.8.3"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
 }

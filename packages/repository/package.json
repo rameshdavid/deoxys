@@ -8,7 +8,6 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "ava",
     "tsc": "tsc -p .",
     "prepare": "tsc",
     "typedoc": "typedoc --out docs",
@@ -16,7 +15,6 @@
     "burnthemall": "rm -rf lib docs node_modules"
   },
   "devDependencies": {
-    "ava": "^0.22.0",
     "typedoc": "^0.11.1",
     "typescript": "^2.5.2"
   },

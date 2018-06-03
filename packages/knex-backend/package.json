@@ -8,7 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "ava",
+    "test": "jest",
     "prepare": "tsc",
     "tsc": "tsc -p .",
     "typedoc": "typedoc --out docs",
@@ -24,16 +24,10 @@
   },
   "devDependencies": {
     "@deoxys/repository": "^0.0.1",
-    "ava": "^0.22.0",
-    "typescript": "^2.5.2",
+    "knex": "^0.14.6",
     "pg": "^7.4.2",
     "sqlite3": "^4.0.0",
     "typedoc": "^0.11.1",
-    "knex": "^0.14.6"
-  },
-  "ava": {
-    "files": [
-      "lib/**/*.spec.js"
-    ]
+    "typescript": "^2.5.2"
   }
 }
