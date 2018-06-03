@@ -9,8 +9,11 @@
   "scripts": {
     "test": "jest",
     "lerna": "lerna",
-    "build": "lerna run --scope @deoxys/repository tsc && lerna run --ignore @deoxys/repository tsc",
-    "docs": "lerna run typedoc"
+    "publish": "lerna run publish",
+    "build-code": "lerna run --scope @deoxys/repository tsc && lerna run --ignore @deoxys/repository tsc",
+    "build-docs": "lerna run typedoc",
+    "build": "yarn run build-code && yarn run build-docs",
+    "prepublish": "yarn run build && yarn run test"
   },
   "devDependencies": {
     "@types/fs-extra": "^5.0.2",
