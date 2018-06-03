@@ -62,7 +62,7 @@
 					<a href="_knexrepository_.knexrepository.html">KnexRepository</a>
 				</li>
 			</ul>
-			<h1>Class KnexRepository&lt;R, E, M&gt;</h1>
+			<h1>Class KnexRepository&lt;RecordType, EntityType, RecordMappingParams&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -81,13 +81,13 @@
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
-						<h4>R</h4>
+						<h4>RecordType</h4>
 					</li>
 					<li>
-						<h4>E</h4>
+						<h4>EntityType</h4>
 					</li>
 					<li>
-						<h4>M</h4>
+						<h4>RecordMappingParams</h4>
 					</li>
 				</ul>
 			</section>
@@ -102,7 +102,7 @@
 			<section class="tsd-panel">
 				<h3>Implements</h3>
 				<ul class="tsd-hierarchy">
-					<li><span class="tsd-signature-type">Repository</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">M</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li><span class="tsd-signature-type">Repository</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RecordType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RecordMappingParams</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
@@ -118,8 +118,14 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_knexrepository_.knexrepository.html#_source" class="tsd-kind-icon">_source</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="_knexrepository_.knexrepository.html#mapper" class="tsd-kind-icon">mapper</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="_knexrepository_.knexrepository.html#source" class="tsd-kind-icon">source</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="_knexrepository_.knexrepository.html#source" class="tsd-kind-icon">source</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -145,13 +151,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Knex<wbr>Repository<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">knex.QueryBuilder</span>, mapper<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">EntityMapper</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">M</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_knexrepository_.knexrepository.html" class="tsd-signature-type">KnexRepository</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Knex<wbr>Repository<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">knex.QueryBuilder</span>, mapper<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">EntityMapper</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RecordType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RecordMappingParams</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_knexrepository_.knexrepository.html" class="tsd-signature-type">KnexRepository</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L18">KnexRepository.ts:18</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L26">KnexRepository.ts:26</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -160,7 +166,7 @@
 									<h5>source: <span class="tsd-signature-type">knex.QueryBuilder</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> mapper: <span class="tsd-signature-type">EntityMapper</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">M</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new IdentityMapper</span></h5>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> mapper: <span class="tsd-signature-type">EntityMapper</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RecordType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RecordMappingParams</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;new IdentityMapper()</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_knexrepository_.knexrepository.html" class="tsd-signature-type">KnexRepository</a></h4>
@@ -170,25 +176,45 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="mapper" class="tsd-anchor"></a>
-					<h3>mapper</h3>
-					<div class="tsd-signature tsd-kind-icon">mapper<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MapperProxy</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">R</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">M</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_source" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _source</h3>
+					<div class="tsd-signature tsd-kind-icon">_source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">knex.QueryBuilder</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L18">KnexRepository.ts:18</a></li>
+							<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L25">KnexRepository.ts:25</a></li>
 						</ul>
 					</aside>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="source" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> source</h3>
-					<div class="tsd-signature tsd-kind-icon">source<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">knex.QueryBuilder</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="mapper" class="tsd-anchor"></a>
+					<h3>mapper</h3>
+					<div class="tsd-signature tsd-kind-icon">mapper<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">MapperProxy</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">RecordType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">RecordMappingParams</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L17">KnexRepository.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L26">KnexRepository.ts:26</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="source" class="tsd-anchor"></a>
+					<h3>source</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> source<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">QueryBuilder</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L40">KnexRepository.ts:40</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">QueryBuilder</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
@@ -203,7 +229,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L79">KnexRepository.ts:79</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L124">KnexRepository.ts:124</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -232,7 +258,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L75">KnexRepository.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L117">KnexRepository.ts:117</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -255,31 +281,31 @@
 					<a name="findmany" class="tsd-anchor"></a>
 					<h3>find<wbr>Many</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Many&lt;Q, T&gt;<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/_knexrepository_.html#queryparam" class="tsd-signature-type">QueryParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Q</span><span class="tsd-signature-symbol">&gt;</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">M</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Many&lt;Query, T&gt;<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/_knexrepository_.html#queryparam" class="tsd-signature-type">QueryParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&gt;</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">RecordMappingParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L41">KnexRepository.ts:41</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L60">KnexRepository.ts:60</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Q</h4>
+									<h4>Query</h4>
 								</li>
 								<li>
-									<h4>T</h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>query: <a href="../modules/_knexrepository_.html#queryparam" class="tsd-signature-type">QueryParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Q</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>query: <a href="../modules/_knexrepository_.html#queryparam" class="tsd-signature-type">QueryParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">M</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">RecordMappingParams</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -290,31 +316,31 @@
 					<a name="findone" class="tsd-anchor"></a>
 					<h3>find<wbr>One</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>One&lt;Q, T&gt;<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/_knexrepository_.html#queryparam" class="tsd-signature-type">QueryParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Q</span><span class="tsd-signature-symbol">&gt;</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">M</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U.Maybe</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>One&lt;Query, T&gt;<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><a href="../modules/_knexrepository_.html#queryparam" class="tsd-signature-type">QueryParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&gt;</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">RecordMappingParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U.Maybe</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L32">KnexRepository.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L51">KnexRepository.ts:51</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>Q</h4>
+									<h4>Query</h4>
 								</li>
 								<li>
-									<h4>T</h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>query: <a href="../modules/_knexrepository_.html#queryparam" class="tsd-signature-type">QueryParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Q</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5>query: <a href="../modules/_knexrepository_.html#queryparam" class="tsd-signature-type">QueryParam</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Query</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">M</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">RecordMappingParams</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">U.Maybe</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -325,22 +351,22 @@
 					<a name="insertmany" class="tsd-anchor"></a>
 					<h3>insert<wbr>Many</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">insert<wbr>Many<span class="tsd-signature-symbol">(</span>entities<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">[]</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">M</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">insert<wbr>Many<span class="tsd-signature-symbol">(</span>entities<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">[]</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">RecordMappingParams</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L51">KnexRepository.ts:51</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L83">KnexRepository.ts:83</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>entities: <span class="tsd-signature-type">E</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>entities: <span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">M</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">RecordMappingParams</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
@@ -354,22 +380,22 @@
 					<a name="insertone" class="tsd-anchor"></a>
 					<h3>insert<wbr>One</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">insert<wbr>One<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">E</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">M</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">insert<wbr>One<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EntityType</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">RecordMappingParams</a>, <span class="tsd-signature-symbol">...</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L46">KnexRepository.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L71">KnexRepository.ts:71</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>entity: <span class="tsd-signature-type">E</span></h5>
+									<h5>entity: <span class="tsd-signature-type">EntityType</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">M</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">RecordMappingParams</a></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>args: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
@@ -383,19 +409,19 @@
 					<a name="updatemany" class="tsd-anchor"></a>
 					<h3>update<wbr>Many</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>Many&lt;T&gt;<span class="tsd-signature-symbol">(</span>entities<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">M</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>Many&lt;T&gt;<span class="tsd-signature-symbol">(</span>entities<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">RecordMappingParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L67">KnexRepository.ts:67</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L106">KnexRepository.ts:106</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -404,7 +430,7 @@
 									<h5>entities: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">M</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">RecordMappingParams</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -415,19 +441,19 @@
 					<a name="updateone" class="tsd-anchor"></a>
 					<h3>update<wbr>One</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">update<wbr>One&lt;T&gt;<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">M</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">update<wbr>One&lt;T&gt;<span class="tsd-signature-symbol">(</span>entity<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, mappingParams<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">RecordMappingParams</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L59">KnexRepository.ts:59</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L95">KnexRepository.ts:95</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
 							<ul class="tsd-type-parameters">
 								<li>
-									<h4>T</h4>
+									<h4>T<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EntityType</span><span class="tsd-signature-symbol">&gt;</span></h4>
 								</li>
 							</ul>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -436,7 +462,7 @@
 									<h5>entity: <span class="tsd-signature-type">T</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">M</a></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> mappingParams: <a href="" class="tsd-signature-type">RecordMappingParams</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -453,7 +479,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/71dcf09/packages/knex-backend/src/KnexRepository.ts#L25">KnexRepository.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/deoxys-node/deoxys/blob/41ba082/packages/knex-backend/src/KnexRepository.ts#L44">KnexRepository.ts:44</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -484,6 +510,9 @@
 						<a href="../modules/_knexrepository_.html">"<wbr>Knex<wbr>Repository"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
+						<a href="../modules/_knexrepository_test_.html">"<wbr>Knex<wbr>Repository.test"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
 						<a href="../modules/_index_.html">"index"</a>
 					</li>
 				</ul>
@@ -498,10 +527,13 @@
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
 								<a href="_knexrepository_.knexrepository.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="_knexrepository_.knexrepository.html#_source" class="tsd-kind-icon">_source</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="_knexrepository_.knexrepository.html#mapper" class="tsd-kind-icon">mapper</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
 								<a href="_knexrepository_.knexrepository.html#source" class="tsd-kind-icon">source</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-has-type-parameter">
