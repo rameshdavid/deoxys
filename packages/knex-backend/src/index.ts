@@ -1,6 +1,6 @@
 import * as knex from "knex";
 import { KnexRepository } from "./KnexRepository";
-import { EntityMapper, IdentityMapper, DefaultRecordMappingParams } from "@deoxys/repository";
+import { EntityMapper, DefaultRecordMappingParams } from "@deoxys/repository";
 
 /**
  * The primary factory function used to build a repository with knex-backend
