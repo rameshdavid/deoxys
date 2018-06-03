@@ -1,0 +1,37 @@
+{
+	"tags":
+	{
+		"allowUnknownTags" : true
+	},
+	"plugins":[
+		 "plugins/markdown"
+		,"/host/Users/loref/Projects/deoxys/node_modules/tsdoc/template/plugins/TSDoc.js"
+	],
+	"opts":
+	{
+		"template"	:"/host/Users/loref/Projects/deoxys/node_modules/tsdoc/template",
+		"recurse"	:"true"
+	},
+	"templates" : {
+		"cleverLinks"     : false,
+		"monospaceLinks"  : false
+	},
+	"source":
+	{
+		"includePattern": "(\\.d)?\\.ts$"
+	},
+	"markdown"  : {
+		"parser"   : "gfm",
+		"hardwrap" : true
+	},
+	"tsdoc":{
+		"source"		:"/host/Users/loref/Projects/deoxys/packages/knex-backend/src/",
+		"destination"	:"/host/Users/loref/Projects/deoxys/packages/knex-backend/docs",
+		"tutorials"		:"",
+		"systemName"	: "knex-backend",
+		"footer"		: "",
+		"copyright"		: "knex-backend Copyright © 2018 lorefnon.",
+		"outputSourceFiles" : true,
+		"commentsOnly": true
+	}
+}

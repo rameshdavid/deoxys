@@ -6,6 +6,11 @@
   "author": "lorefnon",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "lerna": "lerna",
+    "build": "lerna run --scope @deoxys/repository tsc && lerna run --ignore @deoxys/repository tsc",
+    "docs": "lerna run typedoc"
+  },
   "devDependencies": {
     "lerna": "^2.11.0",
     "typescript": "^2.8.3"

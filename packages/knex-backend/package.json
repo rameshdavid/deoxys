@@ -3,22 +3,33 @@
   "version": "0.0.1",
   "description": "A knex based backend for deoxys",
   "main": "lib/index.js",
+  "types": "./lib/index.d.ts",
   "author": "lorefnon",
   "license": "MIT",
   "private": false,
   "scripts": {
     "test": "ava",
-    "prepare": "tsc"
+    "prepare": "tsc",
+    "tsc": "tsc -p .",
+    "typedoc": "typedoc --out docs",
+    "clean": "rm -rf lib docs",
+    "burnthemall": "rm -rf lib docs node_modules"
   },
   "dependencies": {
+    "@types/knex": "^0.14.12"
+  },
+  "peerDependencies": {
     "@deoxys/repository": "^0.0.1",
-    "knex": "^0.14.6",
-    "pg": "^7.4.2",
-    "sqlite3": "^4.0.0"
+    "knex": "^0.14.6"
   },
   "devDependencies": {
+    "@deoxys/repository": "^0.0.1",
     "ava": "^0.22.0",
-    "typescript": "^2.5.2"
+    "typescript": "^2.5.2",
+    "pg": "^7.4.2",
+    "sqlite3": "^4.0.0",
+    "typedoc": "^0.11.1",
+    "knex": "^0.14.6"
   },
   "ava": {
     "files": [
