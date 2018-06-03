@@ -4,6 +4,11 @@
 
 ---
 
+[![Build](https://travis-ci.org/deoxys-node/deoxys.svg?branch=master)](https://travis-ci.org/deoxys-node/deoxys)
+[![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.png?v=101)](https://github.com/ellerbrock/typescript-badges/)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.png?v=103)](https://opensource.org/licenses/mit-license.php)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/deoxys-node/Lobby)
+
 Deoxys is an flexible, adaptable and type-safe repository pattern implementation for Node.js.
 
 Deoxys encourages you to build your applications such that:
