@@ -7,6 +7,9 @@
   "author": "lorefnon",
   "license": "MIT",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "tsc": "tsc -p .",
     "prepare": "tsc",
