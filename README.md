@@ -1,5 +1,9 @@
 # Deoxys
 
+:warning: This package is in early development.
+
+---
+
 Deoxys is an flexible, adaptable and type-safe repository pattern implementation for Node.js.
 
 Deoxys encourages you to build your applications such that:
@@ -46,14 +50,20 @@ yarn add @deoxys/knex-backend
 import * as knex from "knex";
 import {Repository} from "@deoxys/knex-backend";
 
-const userRepo = Repository({
+const usersRepo = Repository({
     source: knex("users")
 });
 
-userRepo.insertAll([{
+usersRepo.insertOne({
     id: 1,
     name: "Alkazar"
-}])
+})
+
+usersRepo.find({
+    name: "Alkazar"
+}).then((entity) => {
+    console.log(entity);
+})
 ```
 
 ### Repositories backed by joined tables
